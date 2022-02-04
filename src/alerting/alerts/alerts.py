@@ -216,8 +216,8 @@ class ProblemWithTelegramBot(Alert):
 
 class AlerterAliveAlert(Alert):
 
-    def __init__(self) -> None:
-        super().__init__('Still running.')
+    def __init__(self, node: str) -> None:
+        super().__init__('Node {}, still running.'.format(node))
 
 
 class NodeInaccessibleDuringStartup(Alert):
